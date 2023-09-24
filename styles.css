@@ -1,0 +1,32 @@
+/*
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 24
+*/
+
+body {
+    background-color: rgb(49, 59, 80);
+    color: white;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'opsz' 100;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    align-content: center;
+}
+
+div {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+}
