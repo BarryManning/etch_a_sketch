@@ -7,8 +7,12 @@ font-variation-settings:
 */
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(49, 59, 80);
     color: white;
+    align-content: center;
+    justify-content: center;
 }
 
 .material-symbols-outlined {
@@ -22,11 +26,13 @@ h1 {
 
 #container {
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
+    width: 320px;
 }
 
-div {
+.pixel {
     background-color: white;
-    width: 100px;
-    height: 100px;
+    width: 20px;
+    height: 20px;
 }
