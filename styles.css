@@ -4,15 +4,20 @@ font-variation-settings:
 'wght' 400,
 'GRAD' 0,
 'opsz' 24
+
+* {
+    border: 1px solid red;
+}
 */
 
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(49, 59, 80);
+    background-color: rgb(23, 29, 37);
     color: white;
-    align-content: center;
+    text-align: center;
     justify-content: center;
+    align-items: center;
 }
 
 .material-symbols-outlined {
@@ -22,17 +27,19 @@ body {
 h1 {
     font-size: 60px;
     text-align: center;
+    color: rgb(241, 213, 152);
 }
 
 #container {
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
-    width: 320px;
+    justify-content: center;
+    align-items: center;
+    width: 720px;
 }
 
 .pixel {
     background-color: white;
-    width: 20px;
-    height: 20px;
+    width: 45px;
+    height: 45px;
 }
