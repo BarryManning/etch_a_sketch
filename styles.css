@@ -32,14 +32,33 @@ h1 {
 
 #container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 720px;
 }
 
-.pixel {
+.pixel16 {
     background-color: white;
     width: 45px;
     height: 45px;
+}
+
+.pixel32 {
+    background-color: white;
+    width: 22.5;
+    height: 22.5;
+}
+
+#toolbar {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 2;
+}
+
+#canvas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 720px;
 }
