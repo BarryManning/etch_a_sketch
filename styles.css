@@ -8,6 +8,9 @@ font-variation-settings:
 * {
     border: 1px solid red;
 }
+
+/* Fonts:
+    font-family: 'Pixelify Sans', cursive;
 */
 
 body {
@@ -25,9 +28,10 @@ body {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 80px;
     text-align: center;
     color: rgb(241, 213, 152);
+    font-family: 'Pixelify Sans', cursive;
 }
 
 #container {
@@ -37,28 +41,27 @@ h1 {
     align-items: center;
 }
 
-.pixel16 {
+.pixel {
     background-color: white;
     width: 45px;
     height: 45px;
 }
 
-.pixel32 {
-    background-color: white;
-    width: 22.5;
-    height: 22.5;
-}
-
 #toolbar {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    flex-shrink: 2;
 }
 
 #canvas {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-grow: 1;
     width: 720px;
 }
+
+a {
+    font-size: 20px;
+}
+
