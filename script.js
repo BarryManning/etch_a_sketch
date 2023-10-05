@@ -3,7 +3,7 @@ const grid16 = document.getElementById('grid16');
 const grid32 = document.getElementById('grid32');
 const canvas = document.getElementById('canvas');
 const pixel = document.getElementsByClassName('pixel');
-const clearBtn = document.getElementById('Clear');
+const clearBtn = document.getElementById('clear');
 let currentColor = 'black';
 
 //default startup 16x16 canvas
@@ -22,9 +22,10 @@ function clearCanvas () {
 
 //grid buttons
 grid16.onclick = function () {
-    if (canvas.childElementCount >= 256) {
+    if (canvas.childElementCount == 256) {
         return
     } else {
+        canvas.innerHTML = '';
         for (let i = 0; i < 256; i++) {
             const addPixel = document.createElement('div');
             canvas.appendChild(addPixel)
@@ -37,10 +38,13 @@ grid32.onclick = function () {
     if (canvas.childElementCount >= 1024) {
         return
     } else {
+        canvas.innerHTML = '';
         for (let i = 0; i < 1024; i++) {
             const addPixel = document.createElement('div');
-            canvas.appendChild(addPixel)
             addPixel.className = 'pixel'
+            canvas.appendChild(addPixel)
+            addPixel.style.width = '22.5px';
+            addPixel.style.height = '22.5px';
         }
     }
 };
