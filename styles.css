@@ -62,6 +62,11 @@ h1 {
     gap: 25px;
 }
 
+#colorPicker {
+    width: 100px;
+    height: 100px;
+}
+
 #canvas {
     display: flex;
     flex-direction: row;

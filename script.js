@@ -4,6 +4,14 @@ const grid32 = document.getElementById('grid32');
 const canvas = document.getElementById('canvas');
 const pixel = document.getElementsByClassName('pixel');
 const clearBtn = document.getElementById('clear');
+let colorPicker = document.getElementById('colorPicker');
+
+function updateColor () {
+    currentColor = colorPicker.value;
+}
+
+colorPicker.addEventListener('change', updateColor);
+
 let currentColor = 'black';
 
 //default startup 16x16 canvas
@@ -16,7 +24,6 @@ for (let i = 0; i < 256; i++) {
 function clearCanvas () {
     for (let i = 0; i < pixel.length; i++) {
         pixel[i].style.backgroundColor = 'white';
-        console.log('running');
     }
 };
 
@@ -51,7 +58,7 @@ grid32.onclick = function () {
 
 clearBtn.onclick = function () {
     clearCanvas();
-}
+};
 
 //mouse over paint
 window.addEventListener("mouseover", function (event) {
@@ -59,5 +66,6 @@ window.addEventListener("mouseover", function (event) {
         event.target.style.backgroundColor = currentColor;
     } 
 });
+
 
 
