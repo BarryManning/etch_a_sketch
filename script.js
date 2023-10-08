@@ -58,29 +58,31 @@ clearBtn.onclick = function () {
     clearCanvas();
 };
 
-
 let isErasing = false;
+
+//mouse over paint func
+function mouseOverPaint (event) {
+    if (!isErasing && event.target.className == 'pixel') {
+        currentColor = colorPicker.value;
+        event.target.style.backgroundColor = currentColor;
+    } else if (isErasing == true && event.target.className == 'pixel') {
+        event.target.style.backgroundColor = 'white';
+    }
+};
 
 //eraser button
 eraserBtn.onclick = function () {
-    isErasing == true
-    currentColor = 'white'
+    isErasing = true
     console.log('now erasing')
 };
 
 //marker button
 markerBtn.onclick = function () {
-    isErasing == false
+    isErasing = false
+    console.log('now painting');
 };
 
 //mouse over paint event
-if (isErasing == false){
-    window.addEventListener("mouseover", function (event) {
-        currentColor = colorPicker.value;
-        if (event.target.className == 'pixel') {
-            event.target.style.backgroundColor = currentColor;
-        } 
-    })
-};
+window.addEventListener("mouseover", mouseOverPaint);
 
 
